@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  nym-mixnode:
+    build: .
+    restart: unless-stopped
+    environment:
+      - WALLET_ADDRESS=<YOUR WALLET ADDRESS>
+    volumes:
+       - ./nym-data/:/home/user/.nym/
+    ports:
+      - 1789:1789
+      - 1790:1790
+      - 8000:8000
