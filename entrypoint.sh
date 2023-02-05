@@ -6,7 +6,6 @@ NAME_MIXNODE=${NAME_MIXNODE:-"docker-mixnode"}
 MIXNODES_DIR=~/.nym/mixnodes/${NAME_MIXNODE}
 
 
-
 if [ ! -d ${MIXNODES_DIR} ]; then
    echo "Init nym client"
     if [[ -v ANNOUNCE_HOST ]]; then
