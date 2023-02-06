@@ -48,6 +48,7 @@ jobs:
           push: true
           builder: ${{ steps.buildx.outputs.name }}
           platforms: linux/amd64,linux/arm64,linux/arm64/v8
+          build-arg: NYM_VERSION=${{ steps.get_version.outputs.VERSION }}
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/mixnode:latest
             ${{ secrets.DOCKER_HUB_USERNAME }}/mixnode:${{ steps.get_version.outputs.VERSION }}
