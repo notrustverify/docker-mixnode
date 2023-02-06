@@ -50,8 +50,8 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_HUB_USERNAME }}/pastenym-frontend:latest
             ${{ secrets.DOCKER_HUB_USERNAME }}/pastenym-frontend:${{ steps.get_version.outputs.VERSION }}
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/pastenym-frontend:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/pastenym-frontend:buildcache,mode=max
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/mixnode:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/mixnode:buildcache,mode=max
 
     
     - name: Image digest
