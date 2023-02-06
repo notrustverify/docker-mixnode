@@ -12,7 +12,7 @@ RUN chown -R user:user /home/user && chmod +x nym-mixnode && chmod +x entrypoint
 USER user
 
 EXPOSE 1789
-EXPOSE 1780
+EXPOSE 1790
 EXPOSE 8000
 
 ENTRYPOINT ["./entrypoint.sh"]
