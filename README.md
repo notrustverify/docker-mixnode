@@ -6,6 +6,7 @@
 | Name | Default | Description |
 |------|---------|-------------|
 | `NAME_MIXNODE` | Mandatory | mixnode id |
+| `WALLET_ADDRESS` |Mandatory | wallet address used to bound the mixnode |
 | `ANNOUNCE_HOST`| public ip | announce host used by validator to detect the mixnode |
 | `FORCE_INIT`   | `false` | force a new init of the mixnode |
 
