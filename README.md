@@ -22,13 +22,13 @@ services:
 
 ```
 
-1. Change the permissions of the nym-data folder `chown -R 10000:10000 nym-data`
+2. **Change the permissions of the nym-data folder `chown -R 10000:10000 nym-data`**
 
 ## Environments parameters
 
 | Name | Default | Description |
 |------|---------|-------------|
-| `WALLET_ADDRESS` |Mandatory | wallet address used to bound the mixnode |
+| `WALLET_ADDRESS` | **Mandatory** | wallet address used to bound the mixnode |
 | `NAME_MIXNODE` | `docker-mixnode` | mixnode id |
 | `ANNOUNCE_HOST`| public ip | announce host used by validator to detect the mixnode |
 | `FORCE_INIT`   | `false` | force a new init of the mixnode |
