@@ -1,12 +1,35 @@
 # docker-mixnode
 
+## How to run
+
+1. Create a `docker-compose.yml` file and replace `WALLET_ADDRESS` with correct value. Check other environment variable [here](README.md#environments-parameters)
+```yaml
+version: '3'
+
+services:
+
+  nym-mixnode:
+    build: .
+    restart: unless-stopped
+    environment:
+      - WALLET_ADDRESS=<YOUR WALLET ADDRESS>
+    volumes:
+       - ./nym-data/:/home/user/.nym/
+    ports:
+      - 1789:1789
+      - 1790:1790
+      - 8000:8000
+
+```
+
+1. Change the permissions of the nym-data folder `chown -R 10000:10000 nym-data`
 
 ## Environments parameters
 
 | Name | Default | Description |
 |------|---------|-------------|
-| `NAME_MIXNODE` | Mandatory | mixnode id |
 | `WALLET_ADDRESS` |Mandatory | wallet address used to bound the mixnode |
+| `NAME_MIXNODE` | `docker-mixnode` | mixnode id |
 | `ANNOUNCE_HOST`| public ip | announce host used by validator to detect the mixnode |
 | `FORCE_INIT`   | `false` | force a new init of the mixnode |
 
