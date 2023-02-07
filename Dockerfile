@@ -9,7 +9,7 @@ RUN git clone https://github.com/nymtech/nym && cd nym && git checkout nym-binar
 WORKDIR /nym
 
 # Build your program for release
-RUN cargo build --bin nym-mixnode --release && echo "nym-client built !!!" || "nym-client failed to build."
+RUN cargo build --bin nym-mixnode --release && echo "nym-mixnode built !!!" || "nym-mixnode failed to build."
 RUN rm -rf target/release/deps/* target/release/build/*
 
 
